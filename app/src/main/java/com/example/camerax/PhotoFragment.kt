@@ -116,6 +116,9 @@ class PhotoFragment : Fragment() {
         binding.takeVideoCamera.setOnClickListener{
             MAIN.navController.navigate(R.id.action_photoFragment_to_videoFragment)
         }
+        binding.goToGallery.setOnClickListener{
+            MAIN.navController.navigate(R.id.action_photoFragment_to_mediaFragment)
+        }
 
 
 

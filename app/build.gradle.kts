@@ -57,6 +57,7 @@ dependencies {
     implementation("androidx.camera:camera-view:1.3.1")
     implementation("androidx.camera:camera-video:1.3.1")
     implementation("androidx.camera:camera-extensions:1.3.1")
+    implementation("com.github.bumptech.glide:glide:4.12.0")
     dependencies {
         val nav_version = "2.7.5"
 

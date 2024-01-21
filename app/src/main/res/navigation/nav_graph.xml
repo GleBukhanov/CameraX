@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_photoFragment_to_videoFragment"
             app:destination="@id/videoFragment" />
+        <action
+            android:id="@+id/action_photoFragment_to_mediaFragment"
+            app:destination="@id/mediaFragment" />
     </fragment>
     <fragment
         android:id="@+id/videoFragment"
@@ -21,6 +24,57 @@
         tools:layout="@layout/fragment_video" >
         <action
             android:id="@+id/action_videoFragment_to_photoFragment"
+            app:destination="@id/photoFragment" />
+        <action
+            android:id="@+id/action_videoFragment_to_mediaFragment"
+            app:destination="@id/mediaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mediaFragment"
+        android:name="com.example.camerax.MediaFragments.MediaPhotoFragment"
+        android:label="fragment_media"
+        tools:layout="@layout/fragment_media" >
+        <action
+            android:id="@+id/action_mediaFragment_to_photoFullFragment"
+            app:destination="@id/photoFullFragment" />
+        <action
+            android:id="@+id/action_mediaFragment_to_mediaVideoFragment"
+            app:destination="@id/mediaVideoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoFullFragment"
+        android:name="com.example.camerax.FullFragments.PhotoFullFragment"
+        android:label="fragment_photo_full"
+        tools:layout="@layout/fragment_photo_full" >
+        <action
+            android:id="@+id/action_photoFullFragment_to_photoFragment"
+            app:destination="@id/photoFragment" />
+        <action
+            android:id="@+id/action_photoFullFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mediaVideoFragment"
+        android:name="com.example.camerax.MediaFragments.MediaVideoFragment"
+        android:label="fragment_media_video"
+        tools:layout="@layout/fragment_media_video" >
+        <action
+            android:id="@+id/action_mediaVideoFragment_to_mediaFragment"
+            app:destination="@id/mediaFragment" />
+        <action
+            android:id="@+id/action_mediaVideoFragment_to_videoFullFragment"
+            app:destination="@id/videoFullFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoFullFragment"
+        android:name="com.example.camerax.FullFragments.VideoFullFragment"
+        android:label="fragment_video_full"
+        tools:layout="@layout/fragment_video_full" >
+        <action
+            android:id="@+id/action_videoFullFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
+        <action
+            android:id="@+id/action_videoFullFragment_to_photoFragment"
             app:destination="@id/photoFragment" />
     </fragment>
 </navigation>

@@ -132,8 +132,7 @@ class VideoFragment : Fragment() {
                         isEnabled = true
                     }
                 }
-            }
-        }
+            }        }
 
     }
 
@@ -154,6 +153,9 @@ class VideoFragment : Fragment() {
         binding.captureCamera.setOnClickListener{
         MAIN.navController.navigate(R.id.action_videoFragment_to_photoFragment)
         }
+binding.videoToGallery.setOnClickListener{
+    MAIN.navController.navigate(R.id.action_videoFragment_to_mediaFragment)
+}
     }
 
     private val activityResultLauncher =
